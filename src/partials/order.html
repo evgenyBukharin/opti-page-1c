@@ -1,0 +1,80 @@
+<section class="order">
+	<div class="container order__container">
+		<picture class="order__picture">
+			<source srcset="./img/form-bg.webp" type="image/webp" />
+			<img
+				loading="lazy"
+				src="./img/form-bg.png"
+				class="image order__image"
+				width="200"
+				height="600"
+				alt="Фон формы"
+			/>
+		</picture>
+		<form class="order__form" enctype="multipart/form-data">
+			<div class="order__container-icon">
+				<img
+					loading="lazy"
+					src="./img/form-close.svg"
+					class="image order__icon-close-form"
+					id="closeOrderForm"
+					width="24"
+					height="24"
+					alt="Иконка закрыть"
+				/>
+			</div>
+			<h3 class="title__h3 order__title">Заполните форму</h3>
+			<h5 class="title__h5 order__subtitle">
+				Если у вас есть вопрос или <br />
+				хотите заказать услугу
+			</h5>
+			<input type="text" name="name" id="name1" class="order__input input-name title__h5" placeholder="Имя" />
+			<input
+				type="text"
+				name="tel"
+				id="tel1"
+				class="order__input input-tel title__h5"
+				placeholder="Номер телефона"
+			/>
+			<input
+				type="text"
+				name="name"
+				id="name1"
+				class="order__input input-link title__h5"
+				placeholder="Ссылка на ТЗ в figma ( не обязательно )"
+			/>
+			<div class="order__container-input file-input__container">
+				<div class="order__list-file"></div>
+				<label class="order__label-file" for="file2[]">
+					<input class="order__input-file" type="file" name="file2[]" id="file2[]" multiple />
+					<span class="order__button-file btn-reset">+ Прикрепить документ</span>
+				</label>
+			</div>
+			<button class="btn-reset button button__primary-dark order__button-send" type="submit">Отправить</button>
+			<label class="order__label-checkbox" for="conf2">
+				<input class="order__input-checkbox" type="checkbox" name="conf2" id="conf2" />
+				<div class="order__input-checkbox-control"></div>
+				<span class="title__h6">
+					Нажимая на кнопку “Отправить” вы соглашаетесь с политикой конфиденциальности
+				</span>
+			</label>
+		</form>
+		<div class="order__overlay">
+			<img
+				loading="lazy"
+				src="./img/ok-circle.svg"
+				class="image order__icon-ok"
+				width="200"
+				height="200"
+				alt="Иконка ОК"
+			/>
+			<h2 class="title__h2 order__title-overlay">Заявка успешно отправлена</h2>
+			<h5 class="title__h5 order__subtitle order__subtitle-overlay">
+				Менеджер свяжется с вами в ближайшее время <br />
+				и поможет подобрать лучшее решение и <br />
+				рассчитать стоимость
+			</h5>
+			<button class="btn-reset button button__primary" id="backOrderForm">Назад</button>
+		</div>
+	</div>
+</section>

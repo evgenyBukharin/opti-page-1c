@@ -1,0 +1,41 @@
+.client-1c {
+	height: 100vh;
+	&__container {
+		padding-top: 130px;
+		&-image {
+			min-height: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 18px;
+		}
+	}
+	&__title {
+		color: var(--3-blue-color);
+		text-transform: uppercase;
+		text-align: right;
+		margin-bottom: 20px;
+	}
+	&__subtitle {
+		text-transform: uppercase;
+		text-align: right;
+		margin-left: auto;
+		margin-bottom: 60px;
+		&-blue {
+			color: var(--3-blue-color);
+		}
+	}
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		gap: 41px;
+	}
+	&__item {
+		grid-column: 4 span;
+		text-align: center;
+	}
+	&__text {
+		max-width: 290px;
+		margin: 0 auto;
+	}
+}

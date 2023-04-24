@@ -1,0 +1,49 @@
+.line {
+	position: absolute;
+	background: var(--black-color);
+	pointer-events: none;
+	&-horizontal {
+		&-top {
+			width: 100%;
+			height: 1px;
+			left: 0;
+			top: -16px;
+		}
+		&-bottom {
+			width: 100%;
+			height: 1px;
+			left: 0;
+			bottom: -16px;
+		}
+	}
+	&-vertical {
+		&-right {
+			width: 1px;
+			height: 100%;
+			top: 0;
+			right: -16px;
+		}
+		&-left {
+			width: 1px;
+			height: 100%;
+			top: 0;
+			left: -16px;
+		}
+	}
+	&-hidden {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.line {
+		&-vertical {
+			&-right {
+				right: -8px;
+			}
+			&-left {
+				left: -8px;
+			}
+		}
+	}
+}
