@@ -2,12 +2,16 @@
 	position: fixed;
 	width: 100%;
 	background: var(--white-color);
+	z-index: 1000;
 	&__container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding-top: 12px;
 		padding-bottom: 12px;
+		&-logo {
+			position: relative;
+		}
 	}
 	&__list {
 		display: flex;
@@ -24,6 +28,13 @@
 	&__item {
 		&:not(:last-child) {
 			margin-bottom: 8px;
+		}
+	}
+	& .line {
+		&-horizontal {
+			&-bottom {
+				bottom: 0px;
+			}
 		}
 	}
 }

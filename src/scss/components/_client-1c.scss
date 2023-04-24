@@ -20,7 +20,7 @@
 		text-transform: uppercase;
 		text-align: right;
 		margin-left: auto;
-		margin-bottom: 60px;
+		margin-bottom: 82px;
 		&-blue {
 			color: var(--3-blue-color);
 		}
@@ -33,9 +33,22 @@
 	&__item {
 		grid-column: 4 span;
 		text-align: center;
+		position: relative;
 	}
 	&__text {
 		max-width: 290px;
 		margin: 0 auto;
+	}
+	& .line {
+		&-vertical {
+			&-right {
+				right: -21px;
+			}
+		}
+		&-horizontal {
+			&-top {
+				top: -21px;
+			}
+		}
 	}
 }

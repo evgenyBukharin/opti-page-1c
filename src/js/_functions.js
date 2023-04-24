@@ -44,17 +44,33 @@
 // import 'simplebar';
 
 // Подключение плагина для позиционирования тултипов
-// import { createPopper, right} from '@popperjs/core';
+// import {createPopper, right} from '@popperjs/core';
 // createPopper(el, tooltip, {
 //   placement: 'right'
 // });
 
 // Подключение свайпера
-import Swiper, { Navigation, Pagination } from "swiper";
-// Swiper.use([Navigation, Pagination]);
-// const swiper = new Swiper(el, {
-//   slidesPerView: 'auto',
-// });
+import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
+Swiper.use([Navigation, Pagination, Autoplay]);
+const paginationEl = document.querySelector(".contacts__pagination");
+paginationEl.setAttribute("data-max-slides", document.querySelectorAll(".swiper-slide").length);
+const swiper = new Swiper(".swiper", {
+	slidesPerView: 1,
+	speed: 500,
+	navigation: {
+		nextEl: ".contacts__button-next",
+		prevEl: ".contacts__button-prev",
+	},
+	pagination: {
+		el: paginationEl,
+		type: "progressbar",
+	},
+	autoplay: {
+		delay: 5000,
+		pauseOnMouseEnter: true,
+	},
+	loop: true,
+});
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';

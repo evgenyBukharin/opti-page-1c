@@ -1,5 +1,105 @@
 .contacts {
 	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: flex-start;
 	&__container {
+		transform: translateY(-25%);
+		&-pagination {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+	}
+	&__slider {
+		position: relative;
+		max-width: 750px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	&__address {
+		color: var(--3-blue-color);
+		max-width: 600px;
+		margin: 0 auto;
+		margin-bottom: 12px;
+		font-size: 20px;
+	}
+	&__name {
+		margin-bottom: 4px;
+	}
+	&__job {
+		margin-bottom: 4px;
+	}
+	&__tel {
+		margin-bottom: 22px;
+	}
+	&__link {
+		color: var(--black-color);
+		text-decoration: underline;
+	}
+	&__descr {
+		max-width: 650px;
+		margin: 0 auto;
+		font-style: italic;
+		margin-bottom: 12px;
+	}
+	&__button {
+		height: 40px;
+		width: 40px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&-next {
+			transform: translateX(16px);
+		}
+		&-prev {
+			transform: rotate(180deg) translateX(16px);
+		}
+		&-faq {
+			text-transform: uppercase;
+			margin: 0 auto;
+			margin-top: 60px;
+			padding: 12px 24px;
+		}
+	}
+	&__svg {
+		fill: var(--1-blue-color);
+	}
+	&__navigation {
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		right: 0;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	&__pagination {
+		display: block;
+		position: relative;
+		max-width: 460px;
+		min-width: 300px;
+		background-color: var(--1-grey-color);
+		--swiper-theme-color: var(--1-blue-color);
+		&::before,
+		&::after {
+			position: absolute;
+			font-family: var(--font-family);
+			font-weight: 400;
+			font-size: 22px;
+			line-height: 120%;
+			color: var(--black-color);
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&::before {
+			content: "1";
+			left: -44px;
+		}
+		&::after {
+			content: attr(data-max-slides);
+			right: -44px;
+		}
 	}
 }

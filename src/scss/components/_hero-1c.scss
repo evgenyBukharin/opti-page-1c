@@ -4,7 +4,7 @@
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		gap: 33px;
+		gap: 57px;
 		padding-top: 100px;
 		&-left {
 			grid-column: 7 span;
@@ -40,12 +40,12 @@
 		text-transform: uppercase;
 		font-weight: 500;
 		line-height: 120%;
-		margin-bottom: 50px;
+		margin-bottom: 68px;
 	}
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		column-gap: 30px;
+		column-gap: 41px;
 	}
 	&__item {
 		grid-column: 6 span;
@@ -53,6 +53,7 @@
 		flex-direction: column;
 		align-items: center;
 		row-gap: 10px;
+		position: relative;
 	}
 	&__text {
 		margin-top: 4px;
@@ -62,5 +63,18 @@
 	&__form {
 		box-shadow: 0 0 70px 3px rgba(0, 0, 0, 0.5);
 		min-height: 400px;
+		padding: 12px;
+	}
+	& .line {
+		&-vertical {
+			&-right {
+				right: -21px;
+			}
+		}
+		&-horizontal {
+			&-top {
+				top: -21px;
+			}
+		}
 	}
 }
