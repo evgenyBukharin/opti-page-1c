@@ -1,11 +1,11 @@
-.contacts {
+.contacts-1c {
 	height: 100vh;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: flex-start;
 	&__container {
-		transform: translateY(-25%);
+		transform: translateY(-45%);
 		&-pagination {
 			width: 100%;
 			display: flex;
@@ -60,7 +60,7 @@
 			text-transform: uppercase;
 			margin: 0 auto;
 			margin-top: 60px;
-			padding: 12px 24px;
+			padding: 0 24px;
 		}
 	}
 	&__svg {

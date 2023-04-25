@@ -50,27 +50,8 @@
 // });
 
 // Подключение свайпера
-import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
-Swiper.use([Navigation, Pagination, Autoplay]);
-const paginationEl = document.querySelector(".contacts__pagination");
-paginationEl.setAttribute("data-max-slides", document.querySelectorAll(".swiper-slide").length);
-const swiper = new Swiper(".swiper", {
-	slidesPerView: 1,
-	speed: 500,
-	navigation: {
-		nextEl: ".contacts__button-next",
-		prevEl: ".contacts__button-prev",
-	},
-	pagination: {
-		el: paginationEl,
-		type: "progressbar",
-	},
-	autoplay: {
-		delay: 5000,
-		pauseOnMouseEnter: true,
-	},
-	loop: true,
-});
+// import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
+// Swiper.use([Navigation, Pagination, Autoplay]);
 
 // Подключение анимаций по скроллу
 // import AOS from 'aos';

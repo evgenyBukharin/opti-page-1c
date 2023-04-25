@@ -1,0 +1,34 @@
+.main-1c {
+	height: 100vh;
+	& section {
+		padding-top: 138px;
+	}
+	&__navigation {
+		position: absolute;
+		bottom: 36px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 80px;
+		z-index: 900;
+	}
+	&__svg {
+		width: 37px;
+		height: 34px;
+		fill: var(--3-blue-color);
+		transition: fill 0.3s ease;
+	}
+	&__button {
+		transform: rotate(90deg);
+		&-disabled {
+			cursor: not-allowed;
+			& .main-1c__svg {
+				fill: var(--2-grey-color);
+			}
+		}
+		&-prev {
+			transform: rotate(-90deg);
+		}
+	}
+}

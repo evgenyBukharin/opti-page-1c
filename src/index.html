@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
 	@include('partials/head.html')
-
 	<body class="page__body">
 		<div class="site-container">
 			@include('partials/header-1c.html')
-			<main class="main main-1c">
-				@include('partials/hero-1c.html') @include('partials/client-1c.html')
-				@include('partials/contacts-1c.html')
+			<main class="main main-1c swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">@include('partials/hero-1c.html')</div>
+					<div class="swiper-slide">@include('partials/client-1c.html')</div>
+					<div class="swiper-slide">@include('partials/contacts-1c.html')</div>
+				</div>
+				<div class="main-1c__navigation">
+					<button class="btn-reset main-1c__button main-1c__button-prev">
+						<svg class="main-1c__svg">
+							<use xlink:href="img/sprite.svg#right-arrow"></use>
+						</svg>
+					</button>
+					<button class="btn-reset main-1c__button main-1c__button-next">
+						<svg class="main-1c__svg">
+							<use xlink:href="img/sprite.svg#right-arrow"></use>
+						</svg>
+					</button>
+				</div>
 			</main>
 		</div>
 	</body>
