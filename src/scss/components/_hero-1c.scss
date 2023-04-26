@@ -1,5 +1,6 @@
 .hero-1c {
 	display: flex;
+	opacity: 0;
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);

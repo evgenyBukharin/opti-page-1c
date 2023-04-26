@@ -14,6 +14,7 @@ function splitText(el) {
 
 // таймлайн первой секции
 const hero1c = document.querySelector(".hero-1c");
+hero1c.style.opacity = "1";
 if (hero1c !== null) {
 	const heroTl = gsap.timeline();
 
