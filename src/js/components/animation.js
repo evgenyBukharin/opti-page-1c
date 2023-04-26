@@ -1,6 +1,4 @@
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 // функция разделения текста на буквы и слова
 function splitText(el) {

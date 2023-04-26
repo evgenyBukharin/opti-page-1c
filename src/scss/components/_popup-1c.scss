@@ -1,0 +1,21 @@
+.popup-1c {
+	position: fixed;
+	inset: 0;
+	z-index: 1000;
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(5px);
+	opacity: 0;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__form {
+		box-shadow: 0 0 70px 3px rgba(0, 0, 0, 0.5);
+		min-height: 400px;
+		min-width: 300px;
+		border: 1px solid var(--2-grey-color);
+		border-radius: 15px;
+		padding: 12px;
+		background: var(--white-color);
+	}
+}
