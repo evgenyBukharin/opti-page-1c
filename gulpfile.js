@@ -151,6 +151,9 @@ const scripts = () => {
 		.pipe(
 			webpackStream({
 				mode: isProd ? "production" : "development",
+				optimization: {
+					minimize: false,
+				},
 				output: {
 					filename: "main.js",
 				},
