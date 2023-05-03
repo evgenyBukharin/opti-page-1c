@@ -5,14 +5,13 @@
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		gap: 57px;
-		padding-top: 100px;
 		&-left {
 			grid-column: 7 span;
 		}
 		&-right {
 			grid-column: 5 span;
-			padding-left: 40px;
-			padding-right: 40px;
+			display: flex;
+			align-items: center;
 		}
 		&-inner {
 			display: flex;
@@ -21,13 +20,12 @@
 		}
 	}
 	&__title {
-		margin-top: 28px;
 		color: var(--3-blue-color);
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		line-height: 120%;
 		margin-bottom: 24px;
-		font-size: 46px;
+		font-size: 44px;
 		&-item {
 			text-align: center;
 		}
@@ -42,7 +40,7 @@
 	&__list {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
-		column-gap: 41px;
+		gap: 41px;
 	}
 	&__item {
 		grid-column: 6 span;
@@ -61,6 +59,7 @@
 		box-shadow: 0 0 70px 3px rgba(0, 0, 0, 0.5);
 		min-height: 400px;
 		padding: 12px;
+		width: 100%;
 	}
 	& .line {
 		&-vertical {
@@ -72,6 +71,71 @@
 			&-top {
 				top: -21px;
 			}
+		}
+	}
+}
+
+@media (max-width: 840px) {
+	.hero-1c {
+		padding-top: 40px;
+		margin-bottom: 80px;
+		&__container {
+			column-gap: 0;
+			&-left {
+				grid-column: 12 span;
+			}
+			&-right {
+				grid-column: 12 span;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-1c {
+		padding-top: 40px;
+		margin-bottom: 40px;
+		&__container {
+			row-gap: 75px;
+		}
+		&__title {
+			font-size: 36px;
+			margin-bottom: 12px;
+		}
+		&__subtitle {
+			font-size: 20px;
+		}
+		&__list {
+			column-gap: 0;
+		}
+		&__item {
+			grid-column: 12 span;
+		}
+		& .line-vertical-right {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 436px) {
+	.hero-1c {
+		&__title {
+			font-size: 30px;
+		}
+		&__subtitle {
+			font-size: 18px;
+			margin-bottom: 54px;
+		}
+		&__container {
+			row-gap: 60px;
+		}
+	}
+}
+
+@media (max-width: 345px) {
+	.hero-1c {
+		&__title {
+			font-size: 28px;
 		}
 	}
 }

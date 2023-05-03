@@ -1,22 +1,20 @@
 .contacts-1c {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-	align-items: flex-start;
 	&__container {
-		transform: translateY(-45%);
+		position: relative;
 		&-pagination {
 			width: 100%;
 			display: flex;
 			justify-content: center;
 		}
+		&-bottom {
+			margin-top: 64px;
+		}
 	}
 	&__slider {
 		position: relative;
-		max-width: 750px;
 		margin: 0 auto;
 		text-align: center;
+		max-width: 690px;
 	}
 	&__address {
 		color: var(--3-blue-color);
@@ -50,11 +48,8 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		&-next {
-			transform: translateX(16px);
-		}
 		&-prev {
-			transform: rotate(180deg) translateX(16px);
+			transform: rotate(180deg);
 		}
 		&-faq {
 			text-transform: uppercase;
@@ -67,19 +62,19 @@
 		fill: var(--1-blue-color);
 	}
 	&__navigation {
+		max-width: 782px;
+		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		position: absolute;
-		right: 0;
-		left: 0;
+		left: 50%;
 		top: 50%;
-		transform: translateY(-50%);
+		transform: translate(-50%, -50%);
 	}
 	&__pagination {
 		display: block;
 		position: relative;
 		max-width: 460px;
-		min-width: 300px;
 		background-color: var(--1-grey-color);
 		--swiper-theme-color: var(--1-blue-color);
 		&::before,
@@ -100,6 +95,53 @@
 		&::after {
 			content: attr(data-max-slides);
 			right: -44px;
+		}
+	}
+}
+
+@media (max-width: 840px) {
+	.contacts-1c {
+		padding-top: 50px;
+		margin-bottom: 80px;
+	}
+}
+
+@media (max-width: 768px) {
+	.contacts-1c {
+		&__navigation {
+			padding: 0 20px;
+		}
+	}
+}
+
+@media (max-width: 590px) {
+	.contacts-1c {
+		&__pagination {
+			max-width: 80%;
+			&::before {
+				left: -30px;
+			}
+			&::after {
+				right: -30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.contacts-1c {
+		padding-top: 70px;
+		padding-bottom: 40px;
+		&__navigation {
+			top: 100%;
+		}
+	}
+}
+
+@media (max-width: 345px) {
+	.contacts-1c {
+		&__navigation {
+			padding: 0 10px;
 		}
 	}
 }

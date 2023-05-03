@@ -87,6 +87,8 @@ a {
 	padding: 0 var(--container-offset);
 	max-width: var(--container-width);
 	&-1c {
+		box-sizing: border-box;
+		width: 100%;
 		max-width: 1140px;
 	}
 }
@@ -113,7 +115,7 @@ a {
 
 @media (max-width: 425px) {
 	.container {
-		padding-left: 16px;
-		padding-right: 16px;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }
